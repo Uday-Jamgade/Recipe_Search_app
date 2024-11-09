@@ -49,7 +49,8 @@ form button[type="submit"]{
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
 }
-form button[type="submit"]:hover{
+form button[type="submit"]:hover ,
+ .recipe button:hover, .recipe-close-btn :hover {
 background-color: #ff5c5c;
 }
 
@@ -74,6 +75,11 @@ background-color: #ff5c5c;
     box-shadow: 0 5px 10px rgba(78,73,73,0.1), -5px -5px 10px rgba(34,34,34,0.5);
     cursor: pointer;
     max-width: 350px;
+    transition:transform 0.3s ease-in-out ;
+}
+
+.recipe:hover{
+    transform: scale(1.02);
 }
 
 .recipe img{
@@ -82,6 +88,86 @@ background-color: #ff5c5c;
 
 .recipe h3{
     font-size:24px;
+}
+
+.recipe button{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 18px auto;
+    background-color: #f44336;
+    color: #fff;
+}
+
+.recipe-details{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    background-color: #694c2f;
+    border-radius: 12px;
+    width: 40%;
+    height: 60%;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;
+
+}
+
+.recipe-details-content{
+    padding: 30px;
+}
+
+.recipeName{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.ingredientList li{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.recipeInstructions p{
+    line-height:30px ;
+    white-space: pre-line;
+}
+
+.recipeName ,.ingredientList ,.recipeInstructions{
+    margin-bottom: 10px;
+}
+
+.recipe-close-btn{
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-details::-webkit-scrollbar{
+    width: 10px;
+
+}
+
+.recipe-details::-webkit-scrollbar-thumb{
+    background: #b5b5ba;
+    border-radius: 10px;
 }
 
 @media screen and (max-width:600px){
