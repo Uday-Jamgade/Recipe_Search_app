@@ -10,6 +10,13 @@ body{
     color: #fff;
 
 }
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background-color: #212121;
+}
 header nav{
     background-color: #212121;
     padding: 20px;
